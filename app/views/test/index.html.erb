@@ -1,0 +1,26 @@
+
+<div class="headeer">
+    <title>Javascript background tut</title>
+</div>
+<div class="bg-red-400">
+    <div class="secParent">
+        <h2 class="secChild1">JS animation tutorial</h2>
+        <div class="banner">
+            <div class="blocks"></div>
+        </div>
+    </div>
+    <script>
+
+        const banner = document.getElementsByClassName('banner')[0];
+        const blocks = document.getElementsByClassName('blocks');
+            for (var i = 1; i < 400; i++)
+            {
+                
+                banner.innerHTML += "<div class='blocks'>";
+                const duration = Math.random() * 5;
+                blocks[i].style.animationDuration = 2+duration + 's';
+                blocks[i].style.animationDuration = duration + 's';
+
+            }
+    </script>
+</div>

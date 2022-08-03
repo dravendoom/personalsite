@@ -1,0 +1,520 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+ .test123{
+    background-color: red;
+    transition: transition 1s cubic-bezier(1, 0, 0, 1);
+ }
+
+html, body{
+   padding:0;
+   margin:0;
+   height: 100%
+}
+
+.white-text-with-blue-shadow {
+   text-shadow: 1px 1px 2px black, 0 0 1em rgb(180, 39, 39), 0 0 0.125em rgb(238, 138, 24);
+   font: 1.25em Georgia, serif;
+ }
+
+
+ 
+ .tg2 {
+   text-shadow: 1px 1px 2px black, 1em 1em 1em rgb(49, 129, 139), 0 0 0.25em rgb(0, 238, 255);
+   font: 1em Georgia, serif;
+ }
+
+ .dark-shadow {
+   text-shadow: 2px 2px 4px black;
+   font: 1em Georgia, serif;
+ }
+
+ .dark-shadow {
+   text-shadow: 2px 2px 4px black;
+   font: 1.25em Georgia, serif;
+ }
+
+ /*
+ 
+                                 BELOW IS STRICTLY ANIMATION
+
+
+ */
+
+ .t1 {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+
+
+ }
+
+ .t2{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 10vh;
+
+ }
+
+.card{
+   position: relative;
+   width: 585px;
+   height: 350px;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   border-radius: 20px;
+   transition: 2s;
+}
+
+.card .circle
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border-radius: 20px;
+   overflow: hidden;
+}
+
+.card .circle::before
+{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #000000;
+   opacity: .8;
+   clip-path: circle(165px at center);
+   transition: 0.5s;
+
+}
+
+.card .circle:hover:before
+{
+
+   background: #5550e3;
+   opacity: 1;
+   clip-path: circle(400px at center);
+
+}
+
+.card img
+{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 300px;
+   pointer-events: none;
+}
+
+.card:hover img{
+   left: 75%;
+   height: 72%;
+   transition: 0.5s;
+
+}
+
+.card .content
+{
+   position: relative;
+   width: 50%;
+   padding: 20px 20px 20px 40px;
+   transition: 0.5s;
+   opacity: 0;
+   visibility: hidden;
+
+}
+
+.card:hover .content{
+   left: 0;
+   opacity: 1;
+   visibility: visible;
+}
+
+.textTest{
+
+   pointer-events:none;
+}
+
+
+
+/*
+
+   END OF PORTFOLIO SCALAR ANIAMTIONS
+
+ */
+.headeer{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+.secParent{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   transform-style: preserve-3d;
+   perspective: 500px;
+
+}
+
+.secChild1{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   text-align: center;
+   line-height: 100vh;
+   font-size: 10vw;
+   color: #fff;
+   font-weight: 700;
+}
+
+.banner{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-wrap: wrap;
+   perspective: 500px;
+}
+
+.banner .blocks{
+
+   position: relative;
+   display: block;
+   width: 10vw;
+   height: 10vh;
+   background: #fff;
+   animation: anii 2s ease-in-out forwards;
+   animation-delay: 1s;
+
+
+}
+
+@keyframes anii {
+
+   0%{
+      transform: translateZ(2000px);
+      background-position: relative;
+      background: #fff;
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+   }
+   100%{
+      transform: translateZ(0px);
+      background: url("meme.PNG");
+      background-position: relative;
+      background-attachment: fixed;
+      background-repeat:no-repeat;
+      background-size:cover;
+      border: 1px solid rgba(0,0,0,.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0);
+   }
+
+   
+}
+
+
+
+.mainPic{
+   background-image: url("dravendoomprofessional.png");
+   background-position:bottom;
+   background-attachment:scroll;
+   background-repeat:no-repeat;
+   min-width: 75vh;
+   min-height: 75vh;
+   max-height: auto;
+   max-width: auto;
+   flex: 0 0 30%;
+}
+
+.mainPic2{
+   background-image: url("dravendoomprofessional.png");
+   background-position:bottom;
+   background-attachment:scroll;
+   background-repeat:no-repeat;
+   min-width: 75vh;
+   min-height: 75vh;
+   max-height: auto;
+   max-width: auto;
+   flex: 0 0 30%;
+}
+
+
+.mainPic:hover{
+   background-image: url("dravendoomnot.png");
+   animation: mainAni 2s ease 0s 1 normal none;
+   transition: 180s;
+   min-width: 75vh;
+   min-height: 75vh;
+   transition:1000;
+
+}
+
+.mainPic::after{
+   background-image: url("dravendoomnot.png");
+   animation: mainAni 2s ease 0s 1 normal none;
+   transition: 180s;
+   min-width: 75vh;
+   min-height: 75vh;
+
+}
+
+.slatePic{
+   background-image: url("slate.jpg");
+   background-position:center;
+   background-attachment:scroll;
+   background-repeat:repeat;
+
+   max-height: auto;
+   max-width: auto;
+}
+
+.carbonPic{
+   background-image: url("carbon.jpg");
+   background-position:initial;
+   background-attachment:local;
+   background-repeat:repeat;
+
+   max-height: auto;
+   max-width: auto;
+}
+@keyframes mainAni {
+   0%{
+      background-image: url("dravendoomprofessional.png");
+      background-position:bottom;
+      background-attachment:scroll;
+      background-repeat:no-repeat;
+      min-width: 75vh;
+      min-height: 75vh;
+      max-height: auto;
+      max-width: auto;
+
+   }
+   49%{
+      background-image: url("dravendoomprofessional.png");
+      background-position:bottom;
+      background-attachment:scroll;
+      background-repeat:no-repeat;
+      opacity: 0;
+      min-width: 75vh;
+      min-height: 75vh;
+      max-height: auto;
+      max-width: auto;
+   }
+   50%{
+      background-image: url("dravendoomnot.png");
+      background-position:bottom;
+      background-attachment:scroll;
+      background-repeat:no-repeat;
+      opacity: 0;
+      min-width: 75vh;
+      min-height: 75vh;
+      max-height: auto;
+      max-width: auto;
+
+   }
+   100%{
+      background-image: url("dravendoomnot.png");
+      background-position:bottom;
+      background-attachment:scroll;
+      background-repeat:no-repeat;
+      opacity: 1;
+      min-width: 75vh;
+      min-height: 75vh;
+      max-height: auto;
+      max-width: auto;
+
+      
+   }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Copy this @keyframes block to your CSS*/
+@keyframes lSO {
+   0.0%{
+       transform: translate(-100rem, 10rem);
+       opacity: 0;
+   }
+   19.8%{
+       transform: translate(0rem);
+       opacity: .5;
+   }
+   40.4%{
+       transform: translate(0rem);
+       opacity: 1;
+   }
+}
+
+/* Add the animation: property to whichever element you want to animate */
+.leftSwoopOpacity{
+   animation: lSO 3s ease 0s 1 normal none;
+}
+
+@keyframes bSO {
+   0.0%{
+       transform-origin: bottom left;
+       transform: translate(0rem, 50rem);
+       opacity: 0;
+   }
+   20.2%{
+       transform-origin: bottom left;
+       opacity: .5;
+   }
+   40.7%{
+       transform-origin: bottom left;
+       opacity: 1;
+       transform: scale(.9);
+   }
+   59.6%{
+       transform-origin: bottom left;
+       opacity: 1;
+       transform: scale(1);
+   }
+}
+
+/* Add the animation: property to whichever element you want to animate */
+.bottomSwoopOpacity{
+   animation: bSO 3s ease 0s 1 normal none;
+}
+
+.chalkboard{
+   background-image: url("chalkboard.jpg");
+   background-position: relative;
+   background-attachment: fixed;
+   background-repeat:no-repeat;
+   background-size:cover;
+}
+
+#chalkboard:hover{
+background-image: url("qqq2222.JPG");
+
+}
+
+@keyframes lS {
+   0.0%{
+       left: -100vh;
+       transform: translate(-100vh, 0vh) scale(.5);
+   }
+   60.1%{
+       left: 0vh;
+       transform: translate(0vh, 0vh) scale(1);
+   }
+   79.8%{
+       left: 0vh;
+       transform: translate(0vh, 0vh) scale(1.05);
+   }
+}
+
+/* Add the animation: property to whichever element you want to animate */
+.leftSwoop{
+   animation: lS 3s ease 0s 1 normal none;
+}
+
+/* Copy this @keyframes block to your CSS*/
+
+@keyframes yourAnimation {
+   0.0%{
+   }
+   19.7%{
+       transform: rotate(45deg) translate(35px, 50px);
+       background: red;
+   }
+}
+
+/* Add the animation: property to whichever element you want to animate */
+.elementToAnimate{
+   animation: yourAnimation 3s ease 0s infinite normal none;
+}
+
